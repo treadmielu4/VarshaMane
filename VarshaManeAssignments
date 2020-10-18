@@ -1,1 +1,312 @@
+import java.util.Scanner;
+public class Factorial {
+
+    public static void main(String[] args) {
+        int number;
+        
+        System.out.println("Enter the number: ");
+        
+        Scanner scanner = new Scanner(System.in);
+        number = scanner.nextInt();
+        scanner.close();
+        long fact = 1;
+        int i = 1;
+        while(i<=number)
+        {
+            fact = fact * i;
+            i++;
+        }
+        System.out.println("Factorial of "+number+" is: "+fact);
+    }
+}
+
+__________________________________________________________________________________________
+
+  
+  import java.util.Scanner;
+
+class FactorialRecursion{
+   public static void main(String args[]){
+      
+      Scanner scanner = new Scanner(System.in);
+      
+      System.out.println("Enter your number:");   
+   
+      int num = scanner.nextInt();
+      
+      
+      int factorial = fact(num);
+      
+      System.out.println("Factorial of your number is: "+factorial);
+      scanner.close();
+      
+   }
+   static int fact(int n)
+   {
+       int output;
+       if(n==1){
+         return 1;
+       }
+       
+       output = fact(n-1)* n;      //recusion
+       return output;
+      
+   }
+}
+
+
+_____________________________________________________________________________________________________________________
+
+
+import java.util.Scanner;
+public class IntegerSum {
+
+  public static void main(String[] args)
+    {
+      Scanner in = new Scanner(System.in);
+      System.out.print("Write an integer here: ");
+      int digits = in.nextInt();
+	  System.out.println("The sum is " + sumDigits(digits));
+	  in.close();
+    }
+
+ public static int sumDigits(long n) {
+		int result = 0;
+		
+		while(n > 0) {
+			result += n % 10;
+			n /= 10;
+		}
+		
+		return result;
+	}
+	
+ }
+
+              
+_____________________________________________________________________________________________________________________________
+
+
+
+import java.util.Scanner;
+
+class LastofIndex
+{
+	public static void main(String args[])
+	{
+		
+		String str;
+		String Char;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the string :");
+	 	str=sc.nextLine();
+	 	
+	 	System.out.println("Enter the letter to know its last index :");
+	 	Char=sc.next();
+	 	System.out.println(str.lastIndexOf((String) Char));
+	 	sc.close();
+	
+	}
+}
+
+_____________________________________________________________________________________________________________________________________
+
+
+import java.util.Scanner;
+
+public class MultiplicationTable {
+
+    public static void main(String[] args) {
+    	int num;
+    	System.out.println("Ënter a Number :");
+        Scanner scanner = new Scanner(System.in);
+        num = scanner.nextInt();
+        scanner.close();
+       
+        for(int i = 1; i <= 10; ++i)
+        {
+            System.out.printf("%d * %d = %d \n", num, i, num * i);
+        }
+    }
+}
+
+__________________________________________________________________________________________________________________
+
+import java.util.Scanner;
+
+public class Natural 
+{
+    public static void main(String args[])
+    {
+        int x, i = 1 ;
+        int sum = 0;
+        System.out.println("Enter Number of items :");
+        Scanner s = new Scanner(System.in);
+        x = s.nextInt();
+        while(i <= x)
+        {
+            sum = sum +i;
+            i++;
+        }
+        System.out.println("Sum of "+x+" numbers is :"+sum);
+        s.close();
+    } 
+}
+
+______________________________________________________________________________________________________________________
+
+import java.util.Scanner;
+
+class Palindrome {
+	 public static void main(String[] args) {
+		Scanner inp = new Scanner(System.in);
+		System.out.print("Enter Number: ");
+		int n = inp.nextInt();
+		int a, s = 0, m = n;
+        inp.close();
+		while (n != 0) 
+		{
+			a = n % 10;
+			s = s * 10 + a;
+			n = n / 10;
+		}
+
+		if (m == s) // Checking if reverse and original are identical.
+			System.out.println(m + " is a Palindrome Number");
+		else
+			System.out.println(m + " is not a Palindrome Number");
+
+	}
+}
+
+____________________________________________________________________________________________________________________
+
+import java.util.Scanner;  
+  
+public class PrimeNumber {  
+  
+   public static void main(String[] args) {  
+       Scanner s = new Scanner(System.in);  
+       System.out.print("Enter a number : ");  
+       int n = s.nextInt();  
+       s.close();
+       if (isPrime(n)) {  
+           System.out.println(n + " is a prime number");  
+       } else {  
+           System.out.println(n + " is not a prime number");  
+       }  
+   }  
+  
+   public static boolean isPrime(int n) {  
+       if (n <= 1) {  
+           return false;  
+       }  
+       for (int i = 2; i < Math.sqrt(n); i++) {  
+           if (n % i == 0) {  
+               return false;  
+           }  
+       }  
+       return true;  
+   }  
+}  
+
+_________________________________________________________________________________________
+
+import java.util.Scanner;
+class ReverseNumberWhile
+{
+   public static void main(String args[])
+   {
+      int num=0;
+      int reversenum =0;
+      System.out.println("Input your number : ");
+      
+      Scanner in = new Scanner(System.in);
+     
+      num = in.nextInt();
+      
+      while( num != 0 )
+      {
+          reversenum = reversenum * 10;
+          reversenum = reversenum + num%10;
+          num = num/10;
+      }
+
+      System.out.println("Reverse of input number is: "+reversenum);
+      in.close();
+   }
+}
+
+_______________________________________________________________________________________________________________
+
+import java.util.Scanner;
+
+class StringLength
+{
+	public static void main(String args[])
+	{
+		
+		String str;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the string :");
+	 	str=sc.nextLine();
+        sc.close();
+		int n=str.length();
+		
+        	System.out.println("Length of the string = "+n);
+		
+	
+	}
+}
+
+__________________________________________________________________________________________________________________
+
+
+import java.util.Scanner;
+public class Swap{
+ public static void main(String[] args) {
+   int x, y, z;
+   Scanner in = new Scanner(System.in);
+
+   System.out.println("Input 1st number: ");
+   x = in.nextInt();
+   System.out.println("Input 2nd number: ");
+   y = in.nextInt();
+
+   z = x;
+   x = y;
+   y = z;
+
+   System.out.println(" Swapped numbers are:" + x + " and " + y);
+   in.close();
+  }
+}
+
+___________________________________________________________________________________________________________________________
+
+
+import java.util.Scanner;  
+
+class SwapWithoutTemp   
+{  
+    public static void main(String a[])   
+    {   
+        System.out.println("Enter the values of x and y :\n");  
+        Scanner sc = new Scanner(System.in);  
+        
+        int x = sc.nextInt();  
+        int y = sc.nextInt();  
+        System.out.println("Before Swapping Numbers: "+x +" "+ y);  
+       
+        x = x + y;   
+        y = x - y;   
+        x = x - y;   
+        System.out.println("After Swapping Numbers: "+x +"  " + y); 
+        sc.close();
+    }   
+}  
+
+_____________________________________________________________________________________________________________________________
+
+
 
